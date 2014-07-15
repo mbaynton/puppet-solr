@@ -17,10 +17,11 @@ class solr::config {
   $warlocation = "${solr::root}/dist/apache-solr-${solr::version}.war"
 
   file { '/etc/tomcat6/Catalina/localhost/solr.xml':
-    ensure  => 'present',
+    ensure  => 'file',
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
+    force   => 'yes',
     content => template('solr/Catalina.solr.xml.erb');
   }
 

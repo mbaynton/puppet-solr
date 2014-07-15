@@ -1,3 +1,12 @@
-solr
+Solr for Drupal
 
-This is the solr module.
+A fork of https://github.com/KrisBuytaert/puppet-solr with some tweaks that produce a working solr instance for Drupal search.
+
+Simply
+    include solr
+    include solr::config4drupal
+in your manifest.
+
+This does everything needed to create and start a new Solr instance with the drupal search module's configs* 
+
+*on a Debian Wheezy box, and probably Ubuntu...

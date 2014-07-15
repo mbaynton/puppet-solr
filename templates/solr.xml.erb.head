@@ -2,3 +2,4 @@
 <solr persistent="<%= scope.lookupvar('solr::persistent') %>">
     <property name="masterUrl" value="<%= scope.lookupvar('solr::masterurl') %>"/>
     <cores adminPath="/admin/cores" shareSchema="<%= scope.lookupvar('solr::shareschema') %>">
+      <core name="drupal" instanceDir="drupal" />
